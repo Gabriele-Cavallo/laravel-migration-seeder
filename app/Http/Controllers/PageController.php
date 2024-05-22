@@ -16,4 +16,13 @@ class PageController extends Controller
 
         return view('home', $data);
     }
+    public function daily() {
+        $trains = Train::where('travel_day', '=', today())->get();
+
+        $data= [
+            'trains' => $trains,
+        ];
+
+        return view('daily', $data);
+    }
 }

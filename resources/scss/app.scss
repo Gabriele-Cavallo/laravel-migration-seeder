@@ -1,12 +1,14 @@
+@use './partials/_variables' as *;
 @import '~bootstrap/scss/bootstrap';
 
 header,
 footer{
-    background-color: #5fc6ad;
+    background-color: $primary-color;
     height: 20vh;
     position: sticky;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 header{
     background-image: url('../img/bg-header.png');
@@ -23,7 +25,15 @@ header{
         }
         h1{
             font-size: 60px;
-            text-shadow: 2px 2px 2px #5fc6ad;
+            text-shadow: 2px 2px 2px $primary-color;
+        }
+    }
+    .nav-wrapper{
+        display: flex;
+        justify-content: center;
+        ul{
+            display: flex;
+            gap: 20px;
         }
     }
 }
@@ -38,4 +48,10 @@ footer{
 .ms-container{
     width: 80%;
     margin: 0 auto;
+}
+a{
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 1px 1px 1px black;
 }
